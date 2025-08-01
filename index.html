@@ -1,19 +1,20 @@
 <html>
 
-
 <head>
-    <meta charset="UTF-8">
+  <title>Student Performance Narrative Visualization</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Student Performance Narrative Visualization</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="https://unpkg.com/d3-annotation@2.5.1/d3-annotation.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-  </head>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/d3-annotation@2.5.1/d3-annotation.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
   <h1>Student Performance in Exams</h1>
+
+
+  <div id="slideContent"></div>
+
 
   <div id="controls">
     <label>Min Score:
@@ -59,6 +60,13 @@
   </div>
 
   <svg id="chart" width="800" height="500"></svg>
+
+
+  <div id="navButtons" style="margin-top: 20px;">
+    <button onclick="prevSlide()">←</button>
+    <button onclick="nextSlide()">→</button>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
