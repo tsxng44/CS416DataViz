@@ -94,6 +94,11 @@ function renderSlide(n) {
   } else if (n === 5) {
     drawBarChart("writing", "Writing");
   }
+
+  const progressPercent = ((n - 1) / (maxSlide - 1)) * 100;
+  d3.select("#progressBar").style("width", `${progressPercent}%`);
+
+
 }
 
 function filterData(subject) {
