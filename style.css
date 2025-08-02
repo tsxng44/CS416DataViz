@@ -23,6 +23,32 @@ h1 {
   gap: 15px;
   margin: 20px 0;
 }
+.nav-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 48px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#navLeft {
+  left: 20px;
+}
+
+#navRight {
+  right: 20px;
+}
 
 label {
   display: flex;
