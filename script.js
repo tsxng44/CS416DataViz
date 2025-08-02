@@ -168,4 +168,58 @@ function drawBarChart(subject, label) {
     .attr("font-size", "18px")
     .attr("font-weight", "bold")
     .text(`${label} Score by Gender`);
+
+    addAnnotation(svg, subject, grouped, x, y);
+
+  
+}
+  function addAnnotation(svg, subject, grouped, x, y) {
+  let annotation;
+
+  if (subject === "math") {
+    annotation = {
+      note: {
+        title: "Math Performance Gap Between Genders",
+        label: "Male students have a notable edge in math, averaging 5 points higher than female students. This difference may reflect societal encouragement of boys in STEM fields — a pattern worth examining when addressing gender equity in education. Feel free to explore other factors as well with the dropdown menu.",
+        wrap: 220
+      },
+      x: x("male") + x.bandwidth() / 2,
+      y: y(grouped.find(d => d.gender === "male").avg),
+      dx: -100,
+      dy: -60
+    };
+  } else if (subject === "reading") {
+    annotation = {
+      note: {
+        title: "Reading Strength for Females",
+        label: "Females outperform males by over 7 points in reading. This gap suggests stronger early literacy development or differences in engagement, possibly influenced by learning environments or expectations. Feel free to explore other factors as well with the dropdown menu.",
+        wrap: 220
+      },
+      x: x("female") + x.bandwidth() / 2,
+      y: y(grouped.find(d => d.gender === "female").avg),
+      dx: 60,
+      dy: -50
+    };
+  } else if (subject === "writing") {
+    annotation = {
+      note: {
+        title: "Writing Shows the Biggest Gap",
+        label: "Female students lead by nearly 9 points in writing scores — the most significant gender gap observed. Feel free to explore other factors as well with the dropdown menu.",
+        wrap: 220
+      },
+      x: x("female") + x.bandwidth() / 2,
+      y: y(grouped.find(d => d.gender === "female").avg),
+      dx: 60,
+      dy: -50
+    };
+  }
+
+  const makeAnnotations = d3.annotation()
+    .type(d3.annotationLabel)
+    .annotations([annotation]);
+
+  svg.append("g")
+    .attr("class", "annotation-group")
+    .call(makeAnnotations);
+
 }
