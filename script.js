@@ -80,7 +80,8 @@ function renderSlide(n) {
   if (n === 1) {
     d3.select("#slideContent").html(`<h2>CS416: Data Visualization Project </h2>
       <h3>Andrew Tseng</h3>
-      <p>Let's explore how different factors like gender, education, lunch plan, and test prep influence exam scores.</p>`);
+      <p>Let's explore how different factors such as gender, education, lunch plan, and test prep influence exam scores.</p>
+      <img src="assets/clipart2575261.png" alt="Student Performance" style="max-width: 400px; margin: 20px auto; display: block;">`);
   } else if (n === 2) {
     d3.select("#slideContent").html(`<h2>About This Visualization</h2>
       <p>This interactive narrative walks through three key academic subjects: Math, Reading, and Writing.
