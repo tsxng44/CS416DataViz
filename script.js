@@ -169,3 +169,6 @@ function drawBarChart(subject, label) {
     .attr("font-weight", "bold")
     .text(`${label} Score by Gender`);
 }
+
+window.nextSlide = nextSlide;
+window.prevSlide = prevSlide;
