@@ -91,10 +91,37 @@ function renderSlide(n) {
   `);
   } else if (n === 3) {
     drawBarChart("math", "Math");
+    d3.select("#slideContent").html(`
+    <h2>Math Score Insights Based on Data</h2>
+    <p><strong>Annotation:</strong> Male students have a noticable edge in math, averaging about 5 points higher than female students.
+    This difference may be due to societal encouragement of males in STEM fields. This may be a pattern worth examining when addressing gender equity in education.</p>
+    <p><strong>Impact:</strong> Highlights a potential social stereotype regarding gender and math ability.</p>
+    <p><strong>Raw Averages:</strong> Male avg = 68.7 vs. Female avg = 63.6</p>
+
+    <p><em>Feel free to use the dropdown menu to filter the chart below.</em></p>
+  `);
   } else if (n === 4) {
     drawBarChart("reading", "Reading");
+     d3.select("#slideContent").html(`
+    <h2>Reading Score Insights Based on Data</h2>
+    <p><strong>Annotation:</strong> Female students generally outperform males in reading by over 7 points on average.
+    This gap may suggests stronger early literacy development, possibly influenced by learning environments or parental/societal expectations.</p>
+    <p><strong>Impact:</strong> Reading proficiency is linked to various academic successes across different disciplines.</p>
+    <p><strong>Raw Averages:</strong> Female avg = 72.6 vs. Male avg = 65.5</p>
+
+    <p><em>Feel free to use the dropdown menu to filter the chart below.</em></p>
+  `);
   } else if (n === 5) {
     drawBarChart("writing", "Writing");
+    d3.select("#slideContent").html(`
+    <h2>Writing Score Insights Based on Data</h2>
+    <p><strong>Annotation:</strong> In general, writing shows the largest gap in performance between genders, with female students scoring on average 9 points higher than males.
+    This may point to a combination of factors, including communication skills, classroom support, societal expectations, and more.</p>
+    <p><strong>Impact:</strong> Writing skills are crucial for both college readiness and success in a professional field.</p>
+    <p><strong>Raw Averages:</strong> Female avg = 72.5 vs. Male avg = 63.3</p>
+
+    <p><em>Feel free to use the dropdown menu to filter the chart below.</em></p>
+  `);
   }
 
   const progressPercent = ((n - 1) / (maxSlide - 1)) * 100;
