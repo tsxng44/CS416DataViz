@@ -127,7 +127,7 @@ function renderSlide(n) {
   else if (n === 6) {
   d3.select("#slideContent").html(`
     <h2>Sources</h2>
-    <p>Original dataset: 
+    <p>
       <a href="https://www.kaggle.com/datasets/spscientist/students-performance-in-exams/data" 
          target="_blank" 
          rel="noopener noreferrer">
