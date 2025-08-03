@@ -86,7 +86,9 @@ function renderSlide(n) {
     d3.select("#slideContent").html(`<h2>About This Visualization</h2>
       <p>This interactive narrative walks through three key academic subjects: Math, Reading, and Writing.
       Use the dropdowns and slider to filter by gender, parental education, lunch status, and test prep completion.
-      Let’s explore how these factors shape performance.</p>`);
+      Let’s explore how these factors shape performance.</p>
+      <img src="assets/slide2.png" alt="Study Concept" style="max-width: 400px; margin: 20px auto; display: block;">
+  `);
   } else if (n === 3) {
     drawBarChart("math", "Math");
   } else if (n === 4) {
