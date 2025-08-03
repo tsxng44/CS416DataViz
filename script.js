@@ -211,7 +211,7 @@ function drawBarChart(subject, label) {
     .attr("text-anchor", "middle")
     .attr("font-size", "18px")
     .attr("font-weight", "bold")
-    .text(`${label} Score by Gender`);
+    .text(`${label} Score by Gender (Average)`);
 }
 
 window.nextSlide = nextSlide;
