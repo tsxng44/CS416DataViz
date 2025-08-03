@@ -1,6 +1,6 @@
 let data = [];
 let currentSlide = 1;
-const maxSlide = 5;
+const maxSlide = 6;
 
 let minScore = 0;
 let filters = {
@@ -123,6 +123,21 @@ function renderSlide(n) {
     <p><em>Feel free to use the dropdown menu to filter the chart below.</em></p>
   `);
   }
+  
+  else if (n === 6) {
+  d3.select("#slideContent").html(`
+    <h2>Sources</h2>
+    <p>Original dataset: 
+      <a href="https://www.kaggle.com/datasets/spscientist/students-performance-in-exams/data" 
+         target="_blank" 
+         rel="noopener noreferrer">
+         Students Performance in Exams - Kaggle
+      </a>
+    </p>`);
+
+  d3.select("#controls").style("display", "none");
+  d3.select("svg").style("display", "none");
+}
 
   const progressPercent = ((n - 1) / (maxSlide - 1)) * 100;
   d3.select("#progressBar").style("width", `${progressPercent}%`);
